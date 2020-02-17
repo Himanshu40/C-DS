@@ -55,7 +55,7 @@ int main()
     printf("+To create and display single linked list+\n");
     printf("++++++++++++++++++++++++++++++++++++++++++\n");
 
-    while (choice == 'Y') {
+    while (choice == 'Y' || choice == 'y') {
         printf("Enter the element: ");
         scanf("%d", &data);
         create_node(&first, data);
