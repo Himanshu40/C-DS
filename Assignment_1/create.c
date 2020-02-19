@@ -1,3 +1,10 @@
+/*
+ * PROGRAM   : To create and display single linked list
+ * FILE      : create.c
+ * CREATED BY: Himanshu Sekhar Nayak
+ * DATED     : 
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 

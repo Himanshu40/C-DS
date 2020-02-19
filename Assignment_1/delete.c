@@ -1,3 +1,10 @@
+/*
+ * PROGRAM   : To create and delete single linked list
+ * FILE      : delete.c
+ * CREATED BY: Himanshu Sekhar Nayak
+ * DATED     : 
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 

@@ -1,3 +1,10 @@
+/*
+ * PROGRAM   : To insert and display single linked list
+ * FILE      : insert.c
+ * CREATED BY: Himanshu Sekhar Nayak
+ * DATED     : 
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
