@@ -2,7 +2,7 @@
  * PROGRAM   : To create and display single linked list
  * FILE      : create.c
  * CREATED BY: Himanshu Sekhar Nayak
- * DATED     : 
+ * DATED     : 03/02/2020
  */
 
 #include <stdio.h>
@@ -19,7 +19,7 @@ typedef struct node
 void create_node(node **head, int new_data)
 {
     node *new_node = (node *)malloc(sizeof(node));
-    node *last     = *head;
+    node *last     = (*head);
 
     new_node->data = new_data;
     new_node->next = NULL;
@@ -42,8 +42,7 @@ void display_node(node *n)
     printf("+List of elements+\n");
     printf("++++++++++++++++++\n");
 
-    while(n != NULL)
-    {
+    while (n != NULL) {
         printf(" %d ", n->data);
         n = n->next;
     }

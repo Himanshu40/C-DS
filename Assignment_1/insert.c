@@ -2,7 +2,7 @@
  * PROGRAM   : To insert and display single linked list
  * FILE      : insert.c
  * CREATED BY: Himanshu Sekhar Nayak
- * DATED     : 
+ * DATED     : 03/02/2020
  */
 
 #include <stdio.h>
@@ -58,7 +58,8 @@ int insertPosn(node **head, int nposn, int new_data)
     
     new_node->data = new_data;
     new_node->next = curr->next;
-    curr->next     = new_node;    
+    curr->next     = new_node;
+    ++node_size;   
 
     return 0;
 }
@@ -148,7 +149,7 @@ int main()
                      printf("Retry?(Y/N)\n");
                      fgetc(stdin);
                      scanf("%c", &choice);
-                     if (choice == 'Y')
+                     if (choice == 'Y' || choice == 'y')
                         goto START;
                      else
                         return 0;
@@ -166,7 +167,7 @@ int main()
                      printf("Retry?(Y/N)\n");
                      fgetc(stdin);
                      scanf("%c", &choice);
-                     if (choice == 'Y')
+                     if (choice == 'Y' || choice == 'y')
                         goto START;
                      else
                         return 0;
@@ -194,7 +195,7 @@ int main()
     printf("Do you want to continue any other operation(Y/N)?\n");
     fgetc(stdin);
     scanf("%c", &choice);
-    if (choice == 'Y')
+    if (choice == 'Y' || choice == 'y')
         goto START;
     else
         printf("Operation terminated successfully\n");

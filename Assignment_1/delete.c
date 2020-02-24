@@ -2,7 +2,7 @@
  * PROGRAM   : To create and delete single linked list
  * FILE      : delete.c
  * CREATED BY: Himanshu Sekhar Nayak
- * DATED     : 
+ * DATED     : 03/02/2020
  */
 
 #include <stdio.h>
@@ -50,6 +50,7 @@ int delNodeStart(node **head)
 
     (*head) = temp->next;
     free(temp);
+    temp = NULL;
     --nodeSize;
 
     return 0;
@@ -79,6 +80,8 @@ int delNodePosn(node **head, int sposn)
 
     last->next = curr->next;
     free(curr);
+    curr = NULL;
+    --nodeSize;
 
     return 0;
 }
@@ -101,6 +104,7 @@ int delNodeLast(node **head)
 
     last->next = NULL;
     free(temp);
+    temp = NULL;
     --nodeSize;
 
     return 0;
@@ -203,6 +207,7 @@ int main()
                  else
                     display_node(first);
                  break;
+                 
         default: printf("Invalid Choice\n");
                  printf("Retry(Y/N): ");
                  fgetc(stdin);
