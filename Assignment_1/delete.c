@@ -198,7 +198,7 @@ int main()
                  if (check) {
                      printf("Retry(Y/N)?\n");
                      fgetc(stdin);
-                     scanf("%c", choice);
+                     scanf("%c", &choice);
                      if (choice == 'Y' || choice == 'y')
                          goto START;
                      else
