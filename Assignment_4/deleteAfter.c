@@ -99,7 +99,7 @@ int main()
     printf("\nEnter the node position to delete after a node: ");
     scanf("%d", &posn);
 
-    if (posn > NodeSize || posn == 0 || posn == NodeSize || posn < 0) {
+    if (posn >= NodeSize || posn <= 0) {
         printf("Entered position is incorrect. Retry(Y/N)?\n");
         fgetc(stdin);
         scanf("%c", &choice);

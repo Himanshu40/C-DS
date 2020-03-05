@@ -79,4 +79,6 @@ int main()
     }
 
     displayNode(first);
+
+    return 0;
 }

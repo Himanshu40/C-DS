@@ -53,26 +53,8 @@ void displayNode(Node *head)
 void createEven(Node *head, Node **top)
 {
     while (head != NULL) {
-        if (head->data % 2 == 0) {
-            Node *newNode = (Node *)malloc(sizeof(Node));
-            newNode->data = head->data;
-            newNode->next = NULL;
-
-            if (*top == NULL) {
-                newNode->prev = NULL;
-                *top          = newNode;
-                head          = head->next;
-                continue;
-            }
-
-            Node *last = (*top);
-
-            while (last->next != NULL)
-                last = last->next;
-
-            last->next    = newNode;
-            newNode->prev = last;
-        }
+        if (head->data % 2 == 0)
+            createNode(&(*top), head->data);
         head = head->next;
     }
 }
@@ -80,26 +62,8 @@ void createEven(Node *head, Node **top)
 void createOdd(Node *head, Node **top)
 {
     while (head != NULL) {
-        if (head->data % 2 != 0) {
-            Node *newNode = (Node *)malloc(sizeof(Node));
-            newNode->data = head->data;
-            newNode->next = NULL;
-
-            if (*top == NULL) {
-                newNode->prev = NULL;
-                *top          = newNode;
-                head          = head->next;
-                continue;
-            }
-
-            Node *last = (*top);
-
-            while (last->next != NULL)
-                last = last->next;
-
-            last->next    = newNode;
-            newNode->prev = last;
-        }
+        if (head->data % 2 != 0)
+            createNode(&(*top), head->data);
         head = head->next;
     }
 }
