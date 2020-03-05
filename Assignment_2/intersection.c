@@ -77,26 +77,9 @@ void intersection(node **first, node **second, node **third)
 
     while (firstLast != NULL) {
         while (secondLast != NULL) {
-            if ((firstLast->data) == (secondLast->data)) {
-                if (!search(*third, secondLast->data)) { 
-                    node *newNode = (node *)malloc(sizeof(node));
-
-                    newNode->data = secondLast->data;
-                    newNode->next = NULL;
-
-                    if (*third == NULL) {
-                        *third = newNode;
-                        secondLast = secondLast->next;
-                        continue;
-                    }
-
-                    node *thirdLast = (*third);
-
-                    while (thirdLast->next != NULL)
-                        thirdLast = thirdLast->next;
-
-                    thirdLast->next = newNode;
-                }
+            if (firstLast->data == secondLast->data) {
+                if (!search(*third, secondLast->data))
+                    create_node(&(*third), secondLast->data);
             }
             secondLast = secondLast->next;
         }
