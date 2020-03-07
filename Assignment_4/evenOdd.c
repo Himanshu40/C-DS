@@ -95,10 +95,10 @@ int main()
     createEven(first, &second);
     createOdd(first, &third);
 
-    printf("\nEven Numbers in 2nd single linked list:-\n");
+    printf("\nEven Numbers in 2nd double linked list:-\n");
     displayNode(second);
 
-    printf("\nOdd Numbers in 3nd single linked list:-\n");
+    printf("\nOdd Numbers in 3nd double linked list:-\n");
     displayNode(third);
     
     return 0;
